@@ -5,24 +5,24 @@ export default {
     extend: {
       colors: {
         bg: {
-          dark:   '#060D07',
-          darker: '#040808',
-          card:   '#0D1810',
-          light:  '#F0F8F2',
+          dark:   '#050C18',   // deep navy-black
+          darker: '#030810',
+          card:   '#0C1629',   // dark navy card
+          light:  '#EEF2FF',   // light blue-tinted
         },
         accent: {
           primary: '#C9A84C',   // Gold
           light:   '#E8C87A',   // Light gold
           warm:    '#FFF8E7',
         },
-        brg: {
-          DEFAULT: '#0B4F28',   // British Racing Green
-          mid:     '#0F6B35',
-          light:   '#178C4A',
+        navy: {
+          DEFAULT: '#081F5B',   // Deep navy (brand color)
+          mid:     '#1A3A7A',
+          light:   '#2563EB',
         },
         text: {
-          muted: '#7A9B82',
-          dark:  '#060D07',
+          muted: '#7A92B5',
+          dark:  '#050C18',
         },
       },
       fontFamily: {
@@ -35,6 +35,7 @@ export default {
       animation: {
         'glow-pulse': 'glowPulse 3s ease-in-out infinite',
         shimmer:      'shimmer 2.5s linear infinite',
+        float:        'float 6s ease-in-out infinite',
       },
       keyframes: {
         glowPulse: {
@@ -44,6 +45,10 @@ export default {
         shimmer: {
           '0%':   { backgroundPosition: '-200% center' },
           '100%': { backgroundPosition:  '200% center' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%':      { transform: 'translateY(-14px)' },
         },
       },
     },

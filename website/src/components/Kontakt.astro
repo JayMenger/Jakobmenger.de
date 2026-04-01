@@ -3,39 +3,46 @@
 
 <section
   id="kontakt"
-  class="py-24 md:py-32"
-  style="background: #0D1810;"
+  class="relative py-32 md:py-44 overflow-hidden"
+  style="background: #050C18;"
   aria-labelledby="kontakt-headline"
 >
-  <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+  <!-- Atmosphärische Blobs -->
+  <div
+    class="absolute pointer-events-none"
+    style="top: 50%; left: 50%; transform: translate(-50%, -55%); width: 900px; height: 700px; background: radial-gradient(ellipse, rgba(8,31,91,0.4) 0%, rgba(201,168,76,0.06) 45%, transparent 70%); filter: blur(80px);"
+    aria-hidden="true"
+  ></div>
 
-    <div class="fade-up mb-6">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 md:px-12 text-center">
+
+    <div class="fade-up mb-8">
       <span class="badge-gold">Kontakt</span>
     </div>
 
     <h2
       id="kontakt-headline"
-      class="font-headline text-[clamp(3.5rem,10vw,8rem)] leading-none text-white fade-up"
-      style="transition-delay: 0.05s;"
+      class="font-headline text-[clamp(3.5rem,10vw,8rem)] leading-[0.92] text-white fade-up"
+      style="transition-delay: 0.06s;"
     >
       LET'S<br />
       <span class="glow-pulse">CONNECT.</span>
     </h2>
 
-    <p class="mt-6 text-text-muted text-xl fade-up" style="transition-delay: 0.1s;">
+    <p class="mt-8 text-xl font-light fade-up" style="color: rgba(255,255,255,0.4); transition-delay: 0.12s;">
       Projekt? Frage? Einfach melden.
     </p>
 
-    <div class="mt-12 flex flex-wrap justify-center gap-4 fade-up" style="transition-delay: 0.15s;">
+    <div class="mt-14 flex flex-wrap justify-center gap-4 fade-up" style="transition-delay: 0.18s;">
       <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/in/jakobmenger/"
         target="_blank"
         rel="noopener noreferrer"
-        class="group inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-200"
+        class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300"
         style="background: #0A66C2; color: #ffffff;"
-        onmouseover="this.style.background='#085299'"
-        onmouseout="this.style.background='#0A66C2'"
+        onmouseover="this.style.background='#085299'; this.style.boxShadow='0 0 40px rgba(10,102,194,0.3)'"
+        onmouseout="this.style.background='#0A66C2'; this.style.boxShadow='none'"
         aria-label="Jakob Menger auf LinkedIn"
       >
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -47,10 +54,10 @@
       <!-- E-Mail -->
       <a
         href="mailto:jakob.menger@icloud.com"
-        class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-200 border"
-        style="border-color: rgba(201,168,76,0.4); color: #C9A84C; background: transparent;"
-        onmouseover="this.style.background='rgba(201,168,76,0.1)'"
-        onmouseout="this.style.background='transparent'"
+        class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300"
+        style="border: 1px solid rgba(201,168,76,0.35); color: #C9A84C; background: transparent;"
+        onmouseover="this.style.background='rgba(201,168,76,0.08)'; this.style.borderColor='rgba(201,168,76,0.6)'"
+        onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(201,168,76,0.35)'"
         aria-label="E-Mail an jakob.menger@icloud.com"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -60,15 +67,9 @@
       </a>
     </div>
 
-    <div class="mt-12 fade-up" style="transition-delay: 0.2s;">
-      <span class="text-text-muted text-sm tracking-widest">jakobmenger.de</span>
+    <div class="mt-14 fade-up" style="transition-delay: 0.24s;">
+      <span class="text-sm tracking-[0.2em]" style="color: rgba(255,255,255,0.2);">jakobmenger.de</span>
     </div>
-
-    <div
-      class="mt-16 mx-auto w-32 h-px fade-up"
-      style="background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent); transition-delay: 0.25s;"
-      aria-hidden="true"
-    ></div>
 
   </div>
 </section>

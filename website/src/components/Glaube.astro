@@ -3,72 +3,67 @@
 
 <section
   id="glaube"
-  class="relative py-32 md:py-40 overflow-hidden radial-glow-center"
+  class="relative py-36 md:py-48 overflow-hidden"
+  style="background: #050C18;"
   aria-labelledby="glaube-headline"
 >
-  <!-- Background grid -->
+
+  <!-- Atmosphärische Blobs — kein Grid -->
   <div
-    class="absolute inset-0 pointer-events-none"
-    style="background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px;"
+    class="absolute pointer-events-none"
+    style="top: -20%; left: 50%; transform: translateX(-50%); width: 1000px; height: 700px; background: radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, rgba(8,31,91,0.08) 45%, transparent 70%); filter: blur(80px);"
     aria-hidden="true"
   ></div>
-
-  <!-- Center glow blob (large, dramatic) -->
   <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-    style="background: radial-gradient(circle, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.05) 40%, transparent 70%);"
+    class="absolute pointer-events-none"
+    style="bottom: -10%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(8,31,91,0.3) 0%, transparent 65%); filter: blur(60px);"
     aria-hidden="true"
   ></div>
 
   <div class="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center">
 
-    <!-- Section label -->
-    <div class="fade-up mb-8">
+    <!-- Badge -->
+    <div class="fade-up mb-10">
       <span class="badge-gold">JESUS 1ST</span>
     </div>
 
-    <!-- Verse — big, dramatic, shimmer -->
-    <div class="fade-up" style="transition-delay: 0.05s;">
+    <!-- Vers -->
+    <div class="fade-up" style="transition-delay: 0.06s;">
       <h2
         id="glaube-headline"
-        class="font-headline text-[clamp(2.5rem,7vw,5.5rem)] leading-tight mb-2"
+        class="font-headline text-[clamp(2.5rem,7vw,5.5rem)] leading-tight"
         aria-label="Kolosser 1,27: Christus in euch, die Hoffnung der Herrlichkeit"
       >
-        <span class="block text-text-muted text-base font-body font-medium tracking-[0.3em] uppercase mb-6">
+        <span class="block font-body font-light text-sm tracking-[0.35em] uppercase mb-8" style="color: rgba(255,255,255,0.35);">
           Kolosser 1,27
         </span>
-        <span class="block italic shimmer-text pb-2">
-          „Christus in euch —
-        </span>
-        <span class="block italic shimmer-text pb-2">
-          die Hoffnung der
-        </span>
-        <span class="block italic shimmer-text">
-          Herrlichkeit."
-        </span>
+        <span class="block italic shimmer-text pb-2">„Christus in euch —</span>
+        <span class="block italic shimmer-text pb-2">die Hoffnung der</span>
+        <span class="block italic shimmer-text">Herrlichkeit."</span>
       </h2>
     </div>
 
     <!-- Divider -->
     <div
-      class="my-12 mx-auto w-24 h-px fade-up"
-      style="background: linear-gradient(90deg, transparent, #C9A84C, transparent); transition-delay: 0.1s;"
+      class="my-14 mx-auto h-px fade-up"
+      style="width: 80px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); transition-delay: 0.12s;"
       aria-hidden="true"
     ></div>
 
-    <!-- Body text -->
-    <div class="space-y-4 text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
-      <p class="fade-up" style="transition-delay: 0.15s;">
+    <!-- Text -->
+    <div class="space-y-5 max-w-xl mx-auto">
+      <p class="fade-up text-lg leading-relaxed font-light" style="color: rgba(255,255,255,0.55); transition-delay: 0.16s;">
         Mein Glaube ist kein Anhängsel — er ist der Kern.
       </p>
-      <p class="fade-up" style="transition-delay: 0.2s;">
-        <strong class="text-accent-light">JESUS 1ST</strong> ist für mich kein Slogan, sondern meine Haltung. Alles was ich tue — Studium, Arbeit, Ehrenamt — fließt aus dieser Überzeugung.
+      <p class="fade-up text-lg leading-relaxed font-light" style="color: rgba(255,255,255,0.55); transition-delay: 0.22s;">
+        <strong class="font-semibold" style="color: #E8C87A;">JESUS 1ST</strong> ist für mich kein Slogan, sondern meine Haltung.
+        Alles was ich tue — Studium, Arbeit, Ehrenamt — fließt aus dieser Überzeugung.
       </p>
-      <p class="fade-up" style="transition-delay: 0.25s;">
-        Ich glaube, dass echter Glaube sichtbar wird: in der Art, wie ich arbeite, wie ich mit Menschen umgehe und wie ich meine Gaben einsetze.
+      <p class="fade-up text-lg leading-relaxed font-light" style="color: rgba(255,255,255,0.55); transition-delay: 0.28s;">
+        Ich glaube, dass echter Glaube sichtbar wird: in der Art, wie ich arbeite,
+        wie ich mit Menschen umgehe und wie ich meine Gaben einsetze.
       </p>
     </div>
-
 
   </div>
 </section>

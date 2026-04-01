@@ -23,79 +23,70 @@ const cards = [
 
 <section
   id="was-ich-tue"
-  class="py-24 md:py-32 bg-[#F0F8F2]"
+  class="py-28 md:py-36"
+  style="background: #F7F8FF;"
   aria-labelledby="was-ich-tue-headline"
 >
   <div class="max-w-7xl mx-auto px-6 md:px-12">
 
     <!-- Header -->
-    <div class="text-center mb-16">
-      <div class="fade-up mb-4">
-        <span class="text-accent-primary text-xs font-semibold tracking-[0.2em] uppercase">Was ich mache</span>
+    <div class="text-center mb-20">
+      <div class="fade-up mb-5">
+        <span class="text-xs font-semibold tracking-[0.22em] uppercase" style="color: #C9A84C;">Was ich mache</span>
       </div>
       <h2
         id="was-ich-tue-headline"
-        class="font-headline text-[clamp(3rem,8vw,6rem)] leading-none text-[#060D07] fade-up"
-        style="transition-delay: 0.05s;"
+        class="font-headline text-[clamp(3rem,8vw,6rem)] leading-none text-[#050C18] fade-up"
+        style="transition-delay: 0.06s;"
       >
         WAS ICH<br />
-        <span
-          class="inline-block"
-          style="background: linear-gradient(90deg, #C9A84C, #8B6914); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
-        >
-          TUE
-        </span>
+        <span style="background: linear-gradient(90deg, #C9A84C, #8B6914); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">TUE</span>
       </h2>
-      <p class="mt-4 text-[#060D07]/60 max-w-xl mx-auto text-lg fade-up" style="transition-delay: 0.1s;">
+      <p class="mt-5 max-w-lg mx-auto text-lg font-light fade-up" style="color: rgba(5,12,24,0.5); transition-delay: 0.1s;">
         Drei Bereiche, ein Antrieb — digitales Business mit echtem Herz.
       </p>
     </div>
 
-    <!-- Cards grid -->
-    <div class="grid md:grid-cols-3 gap-8">
+    <!-- Cards -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
       {cards.map((card, i) => (
         <article
-          class="card-hover fade-up rounded-2xl p-8 flex flex-col"
-          style={`
-            background: #ffffff;
-            border: 1px solid rgba(201,168,76,0.15);
-            box-shadow: 0 4px 24px rgba(201,168,76,0.06);
-            transition-delay: ${i * 0.08}s;
-          `}
+          class="card-hover fade-up rounded-3xl p-8 flex flex-col bg-white"
+          style={`box-shadow: 0 2px 20px rgba(8,31,91,0.06), 0 8px 40px rgba(8,31,91,0.04); transition-delay: ${i * 0.08}s;`}
         >
           <!-- Icon -->
           <div
-            class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-            style="background: rgba(201,168,76,0.1);"
+            class="w-12 h-12 rounded-2xl flex items-center justify-center mb-7"
+            style="background: rgba(8,31,91,0.05);"
             aria-hidden="true"
           >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#081F5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d={card.iconPath} />
             </svg>
           </div>
 
           <!-- Title -->
-          <h3 class="text-[#060D07] font-headline text-2xl mb-3">{card.title}</h3>
+          <h3 class="font-headline text-2xl mb-3" style="color: #050C18;">{card.title}</h3>
 
           <!-- Body -->
-          <p class="text-[#060D07]/65 leading-relaxed flex-1">{card.body}</p>
+          <p class="text-base leading-relaxed flex-1 font-light" style="color: rgba(5,12,24,0.6);">{card.body}</p>
 
           <!-- Tags -->
-          <div class="mt-6 flex flex-wrap gap-2">
+          <div class="mt-7 flex flex-wrap gap-2">
             {card.tags.map((tag) => (
               <span
-                class="px-3 py-1 rounded-full text-xs font-semibold"
-                style="background: rgba(201,168,76,0.12); color: #8B6914;"
+                class="px-3 py-1 rounded-full text-xs font-medium"
+                style="background: rgba(8,31,91,0.06); color: #1A3A7A;"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <!-- Bottom accent bar -->
+          <!-- Accent line -->
           <div
-            class="mt-6 h-0.5 w-12 rounded-full"
-            style="background: linear-gradient(90deg, #C9A84C, #E8C87A);"
+            class="mt-7 h-px"
+            style="background: linear-gradient(90deg, #081F5B22, #C9A84C66, transparent);"
             aria-hidden="true"
           ></div>
         </article>

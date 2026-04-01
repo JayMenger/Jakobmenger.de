@@ -3,34 +3,42 @@
 
 <section
   id="hero"
-  class="relative min-h-screen flex items-center overflow-hidden radial-glow"
+  class="relative min-h-screen flex items-center overflow-hidden"
+  style="background: #050C18;"
   aria-label="Hero"
 >
-  <!-- Subtle grid lines -->
+
+  <!-- ── Atmosphärische Licht-Blobs (kein Gitter, kein Grid) ── -->
+
+  <!-- Gold bloom oben rechts -->
   <div
-    class="absolute inset-0 pointer-events-none"
-    style="background-image: linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px); background-size: 80px 80px;"
+    class="absolute pointer-events-none"
+    style="top: -10%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(201,168,76,0.09) 0%, transparent 60%); filter: blur(60px);"
     aria-hidden="true"
   ></div>
 
-  <!-- Top-right corner glow -->
+  <!-- Navy-Tiefe unten links -->
   <div
-    class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full pointer-events-none"
-    style="background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); transform: translate(30%, -30%);"
+    class="absolute pointer-events-none"
+    style="bottom: -15%; left: -15%; width: 900px; height: 900px; background: radial-gradient(circle, rgba(8,31,91,0.45) 0%, transparent 65%); filter: blur(80px);"
     aria-hidden="true"
   ></div>
 
-  <!-- BRG accent strip left -->
-  <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#0B4F28] to-transparent opacity-60" aria-hidden="true"></div>
+  <!-- Warmer Mittel-Glow (Textseite) -->
+  <div
+    class="absolute pointer-events-none"
+    style="top: 30%; left: 5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%); filter: blur(50px);"
+    aria-hidden="true"
+  ></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-28 pb-20">
-    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-24">
+    <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-      <!-- Left: Text -->
+      <!-- ── Links: Text ── -->
       <div class="order-2 md:order-1">
 
-        <!-- JESUS 1ST badge -->
-        <div class="mb-6 fade-up" style="transition-delay: 0.05s;">
+        <!-- Badge -->
+        <div class="mb-8 fade-up" style="transition-delay: 0.05s;">
           <span class="badge-gold">
             <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" aria-hidden="true">
               <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-3.5a.5.5 0 0 1 .5.5v2.5H11a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V8.5H5a.5.5 0 0 1 0-1h2.5V5a.5.5 0 0 1 .5-.5Z"/>
@@ -39,96 +47,94 @@
           </span>
         </div>
 
-        <!-- Main headline -->
+        <!-- Headline -->
         <div class="fade-up" style="transition-delay: 0.1s;">
-          <h1 class="font-headline leading-none">
-            <span
-              class="block text-[clamp(5rem,14vw,10rem)] text-white tracking-wide"
-            >
+          <h1 class="font-headline leading-[0.92]">
+            <span class="block text-[clamp(5rem,13vw,9.5rem)] text-white tracking-wide">
               JAKOB
             </span>
-            <span
-              class="block text-[clamp(5rem,14vw,10rem)] tracking-wide shimmer-text"
-            >
+            <span class="block text-[clamp(5rem,13vw,9.5rem)] tracking-wide shimmer-text">
               MENGER
             </span>
           </h1>
         </div>
 
         <!-- Subline -->
-        <div class="fade-up mt-4" style="transition-delay: 0.2s;">
-          <p class="text-sm md:text-base font-body font-medium tracking-[0.25em] text-text-muted uppercase">
-            E-Commerce · Marketing · Content
+        <div class="fade-up mt-6" style="transition-delay: 0.18s;">
+          <p class="text-sm font-medium tracking-[0.28em] uppercase" style="color: rgba(201,168,76,0.6);">
+            E-Commerce &nbsp;·&nbsp; Marketing &nbsp;·&nbsp; Content
           </p>
         </div>
 
         <!-- Statement -->
-        <div class="fade-up mt-8 max-w-md" style="transition-delay: 0.3s;">
-          <p class="text-white/70 text-lg leading-relaxed">
+        <div class="fade-up mt-7 max-w-sm" style="transition-delay: 0.26s;">
+          <p class="text-white/55 text-lg leading-relaxed font-light">
             Christ, Student & Marketer — ich verbinde digitales Business mit echtem Antrieb.
           </p>
         </div>
 
         <!-- CTAs -->
-        <div class="fade-up mt-10 flex flex-wrap gap-4" style="transition-delay: 0.4s;">
+        <div class="fade-up mt-12 flex flex-wrap gap-4" style="transition-delay: 0.34s;">
           <a
             href="#ueber"
-            class="px-7 py-3.5 font-semibold rounded-full text-sm transition-all duration-200"
-            style="background: #C9A84C; color: #060D07;"
-            onmouseover="this.style.background='#E8C87A'"
-            onmouseout="this.style.background='#C9A84C'"
+            class="px-8 py-3.5 font-semibold rounded-full text-sm transition-all duration-300"
+            style="background: #C9A84C; color: #050C18;"
+            onmouseover="this.style.background='#E8C87A'; this.style.boxShadow='0 0 40px rgba(201,168,76,0.3)'"
+            onmouseout="this.style.background='#C9A84C'; this.style.boxShadow='none'"
           >
-            Mehr erfahren →
+            Mehr erfahren
           </a>
           <a
             href="#kontakt"
-            class="px-7 py-3.5 border font-medium rounded-full text-sm transition-all duration-200 text-white/70 hover:text-accent-primary"
-            style="border-color: rgba(201,168,76,0.3);"
-            onmouseover="this.style.borderColor='rgba(201,168,76,0.7)'"
-            onmouseout="this.style.borderColor='rgba(201,168,76,0.3)'"
+            class="px-8 py-3.5 rounded-full text-sm font-medium transition-all duration-300"
+            style="border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.55);"
+            onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'; this.style.color='#C9A84C'"
+            onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'; this.style.color='rgba(255,255,255,0.55)'"
           >
             Kontakt
           </a>
         </div>
       </div>
 
-      <!-- Right: Photo -->
-      <div class="order-1 md:order-2 flex flex-col items-center md:items-end fade-up" style="transition-delay: 0.15s;">
-        <div class="relative">
-          <!-- Outer glow -->
+      <!-- ── Rechts: Foto mit atmosphärischem Licht ── -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end fade-up animate-float" style="transition-delay: 0.12s;">
+        <div class="relative flex items-center justify-center">
+
+          <!-- Atmosphärischer Hintergrund-Glow (hinter dem Foto) -->
           <div
-            class="absolute inset-0 rounded-full pointer-events-none"
-            style="background: radial-gradient(circle, rgba(201,168,76,0.2) 0%, transparent 70%); transform: scale(1.3);"
+            class="absolute pointer-events-none rounded-full"
+            style="width: 520px; height: 520px; background: radial-gradient(circle, rgba(201,168,76,0.18) 0%, rgba(8,31,91,0.2) 45%, transparent 70%); filter: blur(50px);"
             aria-hidden="true"
           ></div>
 
-          <!-- Rotating Gold frame -->
-          <div class="photo-frame">
-            <div class="w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full bg-[#060D07] flex items-center justify-center overflow-hidden">
-              <img
-                src="/assets/foto.jpg"
-                alt="Jakob Menger"
-                class="w-full h-full object-cover rounded-full"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                loading="eager"
-              />
-              <div
-                class="w-full h-full rounded-full flex flex-col items-center justify-center"
-                style="display:none; background: linear-gradient(135deg, #0D1810 0%, #060D07 100%); border: 1px solid rgba(201,168,76,0.15);"
-                aria-label="Foto-Platzhalter"
-              >
-                <span class="font-headline text-7xl leading-none" style="color: #C9A84C;">JM</span>
-                <span class="text-text-muted text-xs mt-2 tracking-widest">FOTO FOLGT</span>
-              </div>
+          <!-- Foto-Kreis -->
+          <div
+            class="relative w-[270px] h-[270px] sm:w-[300px] sm:h-[300px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden"
+            style="border: 1px solid rgba(201,168,76,0.2); box-shadow: 0 0 60px rgba(201,168,76,0.1), 0 0 120px rgba(8,31,91,0.25), 0 40px 80px rgba(0,0,0,0.4);"
+          >
+            <img
+              src="/assets/foto.jpg"
+              alt="Jakob Menger"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              loading="eager"
+            />
+            <div
+              class="w-full h-full flex flex-col items-center justify-center"
+              style="display:none; background: linear-gradient(160deg, #0C1629 0%, #050C18 100%);"
+              aria-label="Foto-Platzhalter"
+            >
+              <span class="font-headline text-7xl leading-none" style="color: #C9A84C;">JM</span>
+              <span class="text-xs mt-2 tracking-widest" style="color: rgba(201,168,76,0.4);">FOTO FOLGT</span>
             </div>
           </div>
-        </div>
 
-        <!-- Badge below photo, properly centered -->
-        <div
-          class="mt-6 badge-gold whitespace-nowrap text-[0.7rem] md:text-sm md:px-5 md:py-2"
-        >
-          E-Commerce Student
+          <!-- Badge unter Foto -->
+          <div
+            class="absolute -bottom-5 left-1/2 -translate-x-1/2 badge-gold whitespace-nowrap"
+          >
+            E-Commerce Student
+          </div>
         </div>
       </div>
 
@@ -136,10 +142,25 @@
   </div>
 
   <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2 bounce" aria-hidden="true">
-    <span class="text-text-muted text-xs tracking-widest uppercase">Scroll</span>
-    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#C9A84C">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  <div class="absolute bottom-20 left-0 right-0 flex flex-col items-center gap-2 bounce" aria-hidden="true">
+    <span class="text-xs tracking-[0.2em] uppercase" style="color: rgba(255,255,255,0.2);">Scroll</span>
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="rgba(201,168,76,0.5)">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+
+  <!-- Wellenförmiger Übergang zur nächsten Sektion -->
+  <div class="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
+    <svg
+      viewBox="0 0 1440 80"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      style="width: 100%; height: 80px; display: block;"
+    >
+      <path
+        d="M0,40 C240,80 480,0 720,38 C960,76 1200,8 1440,40 L1440,80 L0,80 Z"
+        fill="#0C1629"
+      />
     </svg>
   </div>
 </section>
