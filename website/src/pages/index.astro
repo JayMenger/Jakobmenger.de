@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Ueber from '../components/Ueber.astro';
+import WasIchTue from '../components/WasIchTue.astro';
+import Skills from '../components/Skills.astro';
+import Projekte from '../components/Projekte.astro';
+import Glaube from '../components/Glaube.astro';
+import Podcast from '../components/Podcast.astro';
+import Kontakt from '../components/Kontakt.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout
+  title="Jakob Menger — E-Commerce · Marketing · Content"
+  description="Jakob Menger ist Student, Online Marketer und Christ aus Würzburg. E-Commerce, Video Editing, Content Creation — JESUS 1ST."
+>
+  <Nav />
+  <main>
+    <Hero />
+    <Ueber />
+    <WasIchTue />
+    <Skills />
+    <Projekte />
+    <Glaube />
+    <Podcast />
+    <Kontakt />
+  </main>
+  <Footer />
+</BaseLayout>

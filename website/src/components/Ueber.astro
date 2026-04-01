@@ -1,0 +1,107 @@
+---
+const facts = [
+  { icon: '📍', label: 'Würzburg' },
+  { icon: '📚', label: '4. Semester E-Commerce' },
+  { icon: '💡', label: 'JESUS 1ST' },
+];
+---
+
+<section
+  id="ueber"
+  class="py-24 md:py-32"
+  style="background: #110E1C;"
+  aria-labelledby="ueber-headline"
+>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- ─── Left: Decorative ────────────────────────────────── -->
+      <div class="fade-up">
+        <div
+          class="relative aspect-square max-w-[420px] mx-auto rounded-2xl overflow-hidden"
+          style="background: linear-gradient(135deg, #061108 0%, #0C0A14 100%); border: 1px solid rgba(201,168,76,0.15);"
+        >
+          <!-- Big JM monogram -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span
+              class="font-headline text-[12rem] leading-none select-none"
+              style="color: rgba(201,168,76,0.06);"
+              aria-hidden="true"
+            >
+              JM
+            </span>
+          </div>
+          <!-- Overlay card content -->
+          <div class="relative z-10 h-full flex flex-col justify-end p-8">
+            <blockquote class="text-white/80 text-lg italic leading-relaxed border-l-2 border-accent-primary pl-4">
+              „Christus in euch, die Hoffnung der Herrlichkeit."
+            </blockquote>
+            <cite class="text-accent-light text-sm mt-3 not-italic tracking-widest">Kolosser 1,27</cite>
+          </div>
+          <!-- Corner accent -->
+          <div
+            class="absolute top-0 right-0 w-32 h-32 rounded-bl-full"
+            style="background: radial-gradient(circle at top right, rgba(201,168,76,0.15) 0%, transparent 70%);"
+            aria-hidden="true"
+          ></div>
+        </div>
+      </div>
+
+      <!-- ─── Right: Text ─────────────────────────────────────── -->
+      <div>
+        <!-- Section label -->
+        <div class="fade-up mb-4">
+          <span class="text-accent-primary text-xs font-semibold tracking-[0.2em] uppercase">Über mich</span>
+        </div>
+
+        <!-- Headline -->
+        <h2
+          id="ueber-headline"
+          class="font-headline text-[clamp(3rem,7vw,5rem)] leading-none text-white fade-up"
+          style="transition-delay: 0.05s;"
+        >
+          WER<br />
+          <span class="text-accent-primary">ICH BIN</span>
+        </h2>
+
+        <!-- Body text -->
+        <div class="mt-8 space-y-4 text-white/70 text-lg leading-relaxed fade-up" style="transition-delay: 0.1s;">
+          <p>
+            Ich bin Jakob — Student, Marketer, Creator und Christ. Ich lebe in der Schnittstelle zwischen digitalem Business und echtem Leben: Ich lerne jeden Tag dazu, probiere aus, mache Fehler und wachse.
+          </p>
+          <p>
+            Mein Antrieb? Kolosser 1,27 — Christus in mir, die Hoffnung der Herrlichkeit. Was das konkret bedeutet, siehst du in allem, was ich tue.
+          </p>
+        </div>
+
+        <!-- Quick facts -->
+        <div class="mt-10 flex flex-wrap gap-3 fade-up" style="transition-delay: 0.2s;">
+          {facts.map((fact) => (
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
+              style="background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); color: #E8C87A;"
+            >
+              <span aria-hidden="true">{fact.icon}</span>
+              {fact.label}
+            </span>
+          ))}
+        </div>
+
+        <!-- Stats row -->
+        <div class="mt-12 grid grid-cols-3 gap-6 fade-up" style="transition-delay: 0.25s;">
+          {[
+            { value: '4.', label: 'Semester' },
+            { value: '2+', label: 'Jahre Erfahrung' },
+            { value: '∞', label: 'Motivation' },
+          ].map((stat) => (
+            <div class="text-center">
+              <div class="font-headline text-4xl text-accent-primary">{stat.value}</div>
+              <div class="text-text-muted text-sm mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

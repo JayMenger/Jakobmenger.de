@@ -1,0 +1,104 @@
+---
+const cards = [
+  {
+    icon: '📊',
+    title: 'E-Commerce & Marketing',
+    body: 'Ich studiere E-Commerce an der THWS und arbeite als Online Marketer bei der Top Leader Academy. SEO, Content-Strategie, Conversion — das ist mein Spielfeld.',
+    tags: ['SEO', 'Content', 'Conversion'],
+  },
+  {
+    icon: '🎬',
+    title: 'Video & Content',
+    body: 'Mit DaVinci Resolve schneide ich Videos für die Top Leader Academy und die JUMIKO Franken. Storytelling durch bewegte Bilder — das begeistert mich.',
+    tags: ['DaVinci Resolve', 'Storytelling', 'Podcast'],
+  },
+  {
+    icon: '🌍',
+    title: 'Mission & Ehrenamt',
+    body: 'Bei der JUMIKO Franken und der Jugendarbeit des Dekanats Naila bringe ich digitale Skills und Herz zusammen — weil Kirche und Kreativität kein Widerspruch sind.',
+    tags: ['JUMIKO', 'Jugendarbeit', 'Community'],
+  },
+];
+---
+
+<section
+  id="was-ich-tue"
+  class="py-24 md:py-32 bg-[#F0F8F2]"
+  aria-labelledby="was-ich-tue-headline"
+>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="fade-up mb-4">
+        <span class="text-accent-primary text-xs font-semibold tracking-[0.2em] uppercase">Was ich mache</span>
+      </div>
+      <h2
+        id="was-ich-tue-headline"
+        class="font-headline text-[clamp(3rem,8vw,6rem)] leading-none text-[#040E06] fade-up"
+        style="transition-delay: 0.05s;"
+      >
+        WAS ICH<br />
+        <span
+          class="inline-block"
+          style="background: linear-gradient(90deg, #C9A84C, #B8960A); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
+        >
+          TUE
+        </span>
+      </h2>
+      <p class="mt-4 text-[#040E06]/60 max-w-xl mx-auto text-lg fade-up" style="transition-delay: 0.1s;">
+        Drei Bereiche, ein Antrieb — digitales Business mit echtem Herz.
+      </p>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      {cards.map((card, i) => (
+        <article
+          class="card-hover fade-up rounded-2xl p-8 flex flex-col"
+          style={`
+            background: #ffffff;
+            border: 1px solid rgba(201,168,76,0.15);
+            box-shadow: 0 4px 24px rgba(201,168,76,0.06);
+            transition-delay: ${i * 0.08}s;
+          `}
+        >
+          <!-- Icon -->
+          <div
+            class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6"
+            style="background: rgba(201,168,76,0.1);"
+            aria-hidden="true"
+          >
+            {card.icon}
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-[#040E06] font-headline text-2xl mb-3">{card.title}</h3>
+
+          <!-- Body -->
+          <p class="text-[#040E06]/65 leading-relaxed flex-1">{card.body}</p>
+
+          <!-- Tags -->
+          <div class="mt-6 flex flex-wrap gap-2">
+            {card.tags.map((tag) => (
+              <span
+                class="px-3 py-1 rounded-full text-xs font-semibold"
+                style="background: rgba(201,168,76,0.12); color: #8B6914;"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <!-- Bottom accent bar -->
+          <div
+            class="mt-6 h-0.5 w-12 rounded-full"
+            style="background: linear-gradient(90deg, #C9A84C, #E8C87A);"
+            aria-hidden="true"
+          ></div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
