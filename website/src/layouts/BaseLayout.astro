@@ -1,4 +1,6 @@
 ---
+import CookieBanner from '../components/CookieBanner.astro';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -31,8 +33,9 @@ const {
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#0C0A14] text-white font-body antialiased">
+  <body class="bg-[#060D07] text-white font-body antialiased">
     <slot />
+    <CookieBanner />
 
     <script>
       // ─── Scroll-fade-up observer ───────────────────────────────

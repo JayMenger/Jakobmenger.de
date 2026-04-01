@@ -1,0 +1,116 @@
+---
+// Cookie Consent Banner – DSGVO-konform
+// Lädt Analyse-Skripte (ContentSquare) nur nach expliziter Zustimmung.
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Cookie-Einstellungen"
+  class="hidden fixed bottom-0 left-0 right-0 z-[9999] px-4 pb-4 md:px-6 md:pb-6"
+>
+  <div
+    class="max-w-3xl mx-auto rounded-2xl p-6 md:p-8"
+    style="background: #0A1609; border: 1px solid rgba(201,168,76,0.25); box-shadow: 0 -4px 40px rgba(0,0,0,0.6);"
+  >
+    <div class="flex flex-col md:flex-row md:items-start gap-6">
+
+      <!-- Text -->
+      <div class="flex-1 space-y-2">
+        <p class="font-semibold text-white text-base leading-snug">
+          Diese Website verwendet Cookies
+        </p>
+        <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.6);">
+          Wir nutzen Cookies und ähnliche Technologien, um das Nutzerverhalten zu analysieren und
+          das Erlebnis auf dieser Website zu verbessern. Deine Daten werden nur mit deiner
+          Einwilligung an Drittanbieter (ContentSquare) übertragen.
+          Technisch notwendige Cookies werden immer gesetzt.
+          <a
+            href="/datenschutz"
+            class="underline underline-offset-2 transition-colors duration-150"
+            style="color: #C9A84C;"
+            onmouseover="this.style.color='#E8C87A'"
+            onmouseout="this.style.color='#C9A84C'"
+          >Mehr erfahren</a>
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row md:flex-col gap-2 md:min-w-[180px]">
+        <button
+          id="cookie-accept"
+          class="w-full px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer"
+          style="background: #C9A84C; color: #060D07;"
+          onmouseover="this.style.background='#E8C87A'"
+          onmouseout="this.style.background='#C9A84C'"
+        >
+          Alle akzeptieren
+        </button>
+        <button
+          id="cookie-decline"
+          class="w-full px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer"
+          style="background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.15);"
+          onmouseover="this.style.borderColor='rgba(201,168,76,0.4)';this.style.color='#C9A84C'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.6)'"
+        >
+          Nur notwendige
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const CONSENT_KEY = 'jm_cookie_consent';
+  const CS_SRC = 'https://t.contentsquare.net/uxa/a29cd62030f1c.js';
+
+  function loadContentSquare() {
+    if (document.querySelector(`script[src="${CS_SRC}"]`)) return;
+    const s = document.createElement('script');
+    s.src = CS_SRC;
+    s.async = true;
+    document.head.appendChild(s);
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+      banner.classList.add('hidden');
+    }
+  }
+
+  function showBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+      banner.classList.remove('hidden');
+    }
+  }
+
+  function applyConsent(value: string) {
+    localStorage.setItem(CONSENT_KEY, value);
+    hideBanner();
+    if (value === 'accepted') {
+      loadContentSquare();
+    }
+  }
+
+  // On page load: check existing consent
+  const stored = localStorage.getItem(CONSENT_KEY);
+  if (stored === 'accepted') {
+    loadContentSquare();
+  } else if (!stored) {
+    // No decision yet → show banner
+    showBanner();
+  }
+
+  // Button handlers
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    applyConsent('accepted');
+  });
+
+  document.getElementById('cookie-decline')?.addEventListener('click', () => {
+    applyConsent('declined');
+  });
+</script>

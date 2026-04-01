@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #040E06;
+  background-color: #060D07;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -23,8 +23,8 @@ body {
 /* ─── Gold glow on text ─────────────────────────────────── */
 .text-glow-gold {
   text-shadow:
-    0 0 20px rgba(201, 168, 76, 0.6),
-    0 0 60px rgba(201, 168, 76, 0.3);
+    0 0 20px rgba(201,168,76, 0.6),
+    0 0 60px rgba(201,168,76, 0.3);
 }
 
 /* ─── Gold shimmer ──────────────────────────────────────── */
@@ -54,13 +54,13 @@ body {
 /* ─── Gold glow pulse ───────────────────────────────────── */
 @keyframes glowPulse {
   0%, 100% {
-    text-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+    text-shadow: 0 0 20px rgba(201,168,76, 0.4);
   }
   50% {
     text-shadow:
-      0 0 40px rgba(201, 168, 76, 0.9),
-      0 0 80px rgba(201, 168, 76, 0.5),
-      0 0 120px rgba(201, 168, 76, 0.2);
+      0 0 40px rgba(201,168,76, 0.9),
+      0 0 80px rgba(201,168,76, 0.5),
+      0 0 120px rgba(201,168,76, 0.2);
   }
 }
 
@@ -72,14 +72,14 @@ body {
 /* ─── Radial gold glow backgrounds ──────────────────────── */
 .radial-glow {
   background:
-    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 70%),
-    #040E06;
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,168,76, 0.08) 0%, transparent 70%),
+    #060D07;
 }
 
 .radial-glow-center {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201, 168, 76, 0.1) 0%, transparent 70%),
-    #040E06;
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76, 0.1) 0%, transparent 70%),
+    #060D07;
 }
 
 /* ─── Scroll fade-up ────────────────────────────────────── */
@@ -98,8 +98,8 @@ body {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 #main-nav.scrolled {
-  background: rgba(4, 14, 6, 0.97);
-  box-shadow: 0 1px 0 rgba(201, 168, 76, 0.15);
+  background: rgba(6,13,7, 0.97);
+  box-shadow: 0 1px 0 rgba(201,168,76, 0.15);
   backdrop-filter: blur(12px);
 }
 
@@ -115,11 +115,11 @@ body {
   border-radius: 50%;
   background: conic-gradient(
     from 0deg,
-    #004225,
+    #0B4F28,
     #C9A84C,
     #E8C87A,
     #C9A84C,
-    #004225
+    #0B4F28
   );
   animation: rotateBorder 5s linear infinite;
   z-index: 0;
@@ -137,8 +137,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(201, 168, 76, 0.12);
-  border: 1px solid rgba(201, 168, 76, 0.35);
+  background: rgba(201,168,76, 0.12);
+  border: 1px solid rgba(201,168,76, 0.35);
   color: #C9A84C;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
@@ -153,8 +153,8 @@ body {
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.22);
+  background: rgba(201,168,76, 0.08);
+  border: 1px solid rgba(201,168,76, 0.22);
   color: #E8C87A;
   font-size: 0.875rem;
   font-weight: 500;
@@ -163,8 +163,8 @@ body {
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .skill-pill:hover {
-  background: rgba(201, 168, 76, 0.18);
-  border-color: rgba(201, 168, 76, 0.45);
+  background: rgba(201,168,76, 0.18);
+  border-color: rgba(201,168,76, 0.45);
   color: #C9A84C;
 }
 
@@ -181,7 +181,7 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(201, 168, 76, 0.08);
+  box-shadow: 0 20px 40px rgba(201,168,76, 0.08);
 }
 
 /* ─── Mobile menu ───────────────────────────────────────── */

@@ -13,27 +13,40 @@
       <div class="fade-up flex justify-center md:justify-start">
         <div class="relative">
           <div
-            class="w-[280px] h-[280px] rounded-3xl flex flex-col items-center justify-center shadow-2xl overflow-hidden"
-            style="background: linear-gradient(135deg, #040E06 0%, #061108 50%, #040E06 100%); border: 2px solid rgba(201,168,76,0.25);"
-            role="img"
-            aria-label="Top Leader Academy Podcast Cover"
+            class="w-[280px] h-[280px] rounded-3xl shadow-2xl overflow-hidden"
+            style="border: 2px solid rgba(201,168,76,0.25);"
           >
-            <!-- Decorative rings -->
-            <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-              <div class="w-48 h-48 rounded-full" style="border: 1px solid rgba(201,168,76,0.08);"></div>
-              <div class="w-36 h-36 rounded-full absolute" style="border: 1px solid rgba(201,168,76,0.12);"></div>
-              <div class="w-20 h-20 rounded-full absolute" style="border: 1px solid rgba(201,168,76,0.18);"></div>
-            </div>
-            <div class="relative z-10 text-center">
-              <div class="text-5xl mb-3" aria-hidden="true">🎙️</div>
-              <div class="font-headline text-white text-xl tracking-widest">PODCAST</div>
-              <div class="text-xs tracking-widest mt-1" style="color: #C9A84C;">TOP LEADER ACADEMY</div>
-            </div>
+            <img
+              src="/assets/podcast-thumbnail.jpg"
+              alt="Top Leader Academy Podcast Cover"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Fallback if no image -->
             <div
-              class="absolute bottom-0 left-0 right-0 h-24"
-              style="background: linear-gradient(to top, rgba(201,168,76,0.12), transparent);"
-              aria-hidden="true"
-            ></div>
+              class="w-full h-full flex-col items-center justify-center"
+              style="display:none; background: linear-gradient(135deg, #060D07 0%, #0D1810 50%, #060D07 100%);"
+              role="img"
+              aria-label="Top Leader Academy Podcast Cover"
+            >
+              <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+                <div class="w-48 h-48 rounded-full" style="border: 1px solid rgba(201,168,76,0.08);"></div>
+                <div class="w-36 h-36 rounded-full absolute" style="border: 1px solid rgba(201,168,76,0.12);"></div>
+                <div class="w-20 h-20 rounded-full absolute" style="border: 1px solid rgba(201,168,76,0.18);"></div>
+              </div>
+              <div class="relative z-10 text-center">
+                <svg class="w-12 h-12 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="1.5" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                </svg>
+                <div class="font-headline text-white text-xl tracking-widest">PODCAST</div>
+                <div class="text-xs tracking-widest mt-1" style="color: #C9A84C;">TOP LEADER ACADEMY</div>
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 h-24"
+                style="background: linear-gradient(to top, rgba(201,168,76,0.12), transparent);"
+                aria-hidden="true"
+              ></div>
+            </div>
           </div>
 
           <!-- Play button -->
@@ -42,7 +55,7 @@
             style="background: #C9A84C;"
             aria-hidden="true"
           >
-            <svg class="w-6 h-6 text-[#040E06] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-[#060D07] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
@@ -57,16 +70,16 @@
 
         <h2
           id="podcast-headline"
-          class="font-headline text-[clamp(3rem,7vw,5rem)] leading-none text-[#040E06] fade-up"
+          class="font-headline text-[clamp(3rem,7vw,5rem)] leading-none text-[#060D07] fade-up"
           style="transition-delay: 0.05s;"
         >
           PODCAST
         </h2>
 
-        <div class="mt-6 space-y-4 text-[#040E06]/65 text-base leading-relaxed fade-up" style="transition-delay: 0.1s;">
+        <div class="mt-6 space-y-4 text-[#060D07]/65 text-base leading-relaxed fade-up" style="transition-delay: 0.1s;">
           <p>
-            Der <strong class="text-[#040E06]/85 font-semibold">Top Leader Podcast</strong> ist der Podcast von
-            <strong class="text-[#040E06]/85 font-semibold">Klaus-Peter Grießhammer</strong> — ehemaliger CHRO und
+            Der <strong class="text-[#060D07]/85 font-semibold">Top Leader Podcast</strong> ist der Podcast von
+            <strong class="text-[#060D07]/85 font-semibold">Klaus-Peter Grießhammer</strong> — ehemaliger CHRO und
             Topmanager mit über 25 Jahren Erfahrung. Mit dem FOK.US®-System, das auf 60.000+ Neurowissenschaftsstudien
             basiert, zeigt er wie Führung unter Druck wirklich funktioniert.
           </p>
@@ -89,11 +102,11 @@
                 style="background: rgba(0,66,37,0.12);"
                 aria-hidden="true"
               >
-                <svg class="w-2.5 h-2.5" fill="#004225" viewBox="0 0 8 8">
+                <svg class="w-2.5 h-2.5" fill="#0B4F28" viewBox="0 0 8 8">
                   <circle cx="4" cy="4" r="3" />
                 </svg>
               </span>
-              <span class="text-[#040E06]/70">{item}</span>
+              <span class="text-[#060D07]/70">{item}</span>
             </li>
           ))}
         </ul>
@@ -104,7 +117,7 @@
             href="https://topleader.de/kostenloses-wissen"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 text-[#040E06]"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 text-[#060D07]"
             style="background: #C9A84C;"
             onmouseover="this.style.background='#E8C87A'"
             onmouseout="this.style.background='#C9A84C'"

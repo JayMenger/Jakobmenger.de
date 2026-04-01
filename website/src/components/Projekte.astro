@@ -36,7 +36,7 @@ const projects = [
       </div>
       <h2
         id="projekte-headline"
-        class="font-headline text-[clamp(3rem,8vw,6rem)] leading-none text-[#040E06] fade-up"
+        class="font-headline text-[clamp(3rem,8vw,6rem)] leading-none text-[#060D07] fade-up"
         style="transition-delay: 0.05s;"
       >
         MEINE<br />
@@ -55,7 +55,7 @@ const projects = [
           <!-- Top accent bar -->
           <div
             class="h-1.5 w-full"
-            style="background: linear-gradient(90deg, #004225, #C9A84C, #004225);"
+            style="background: linear-gradient(90deg, #0B4F28, #C9A84C, #0B4F28);"
             aria-hidden="true"
           ></div>
 
@@ -63,27 +63,27 @@ const projects = [
             <div class="text-brg text-xs font-semibold tracking-widest uppercase mb-3">
               {project.category}
             </div>
-            <h3 class="font-headline text-3xl text-[#040E06] mb-4">{project.name}</h3>
-            <p class="text-[#040E06]/65 leading-relaxed flex-1">{project.description}</p>
+            <h3 class="font-headline text-3xl text-[#060D07] mb-4">{project.name}</h3>
+            <p class="text-[#060D07]/65 leading-relaxed flex-1">{project.description}</p>
 
             <div class="mt-6 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span
                   class="px-3 py-1 rounded-full text-xs font-semibold"
-                  style="background: rgba(0,66,37,0.08); color: #004225;"
+                  style="background: rgba(0,66,37,0.08); color: #0B4F28;"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <div class="mt-8 pt-6 border-t border-[#040E06]/10">
+            <div class="mt-8 pt-6 border-t border-[#060D07]/10">
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 font-semibold text-sm transition-all duration-200 hover:gap-3"
-                style="color: #004225;"
+                style="color: #0B4F28;"
               >
                 {project.linkLabel}
               </a>

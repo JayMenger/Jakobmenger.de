@@ -5,24 +5,24 @@ export default {
     extend: {
       colors: {
         bg: {
-          dark:   '#040E06',
-          darker: '#020A04',
-          card:   '#061108',
+          dark:   '#060D07',
+          darker: '#040808',
+          card:   '#0D1810',
           light:  '#F0F8F2',
         },
         accent: {
           primary: '#C9A84C',   // Gold
           light:   '#E8C87A',   // Light gold
-          warm:    '#F0F8F2',
+          warm:    '#FFF8E7',
         },
         brg: {
-          DEFAULT: '#004225',   // British Racing Green
-          mid:     '#005A30',
-          light:   '#007A40',
+          DEFAULT: '#0B4F28',   // British Racing Green
+          mid:     '#0F6B35',
+          light:   '#178C4A',
         },
         text: {
-          muted: '#8BAA90',
-          dark:  '#040E06',
+          muted: '#7A9B82',
+          dark:  '#060D07',
         },
       },
       fontFamily: {
