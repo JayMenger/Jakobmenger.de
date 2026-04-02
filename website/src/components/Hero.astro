@@ -90,6 +90,14 @@
             Kontakt
           </a>
         </div>
+
+        <!-- Mobile scroll indicator: in-flow, nach den Buttons, oberhalb der Welle -->
+        <div class="flex md:hidden flex-col items-center gap-2 bounce mt-10 pb-[100px]" aria-hidden="true">
+          <span class="text-xs tracking-[0.2em] uppercase" style="color: rgba(255,255,255,0.2);">Scroll</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="rgba(201,168,76,0.5)">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </div>
 
       <!-- ── Rechts: Foto mit atmosphärischem Licht ── -->
@@ -137,8 +145,8 @@
     </div>
   </div>
 
-  <!-- Scroll indicator – weiter unten auf Mobile -->
-  <div class="absolute bottom-24 md:bottom-20 left-0 right-0 flex flex-col items-center gap-2 bounce" aria-hidden="true">
+  <!-- Scroll indicator – nur Desktop (Mobile: in-flow nach den CTAs) -->
+  <div class="hidden md:flex absolute bottom-20 left-0 right-0 flex-col items-center gap-2 bounce" aria-hidden="true">
     <span class="text-xs tracking-[0.2em] uppercase" style="color: rgba(255,255,255,0.2);">Scroll</span>
     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="rgba(201,168,76,0.5)">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
