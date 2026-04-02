@@ -1,6 +1,6 @@
 # macOS
 .DS_Store
-website/.DS_Store
+**/.DS_Store
 
 # Dependencies
 website/node_modules/

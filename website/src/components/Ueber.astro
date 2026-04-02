@@ -1,15 +1,10 @@
 ---
-const facts = [
-  { icon: '📍', label: 'Würzburg' },
-  { icon: '📚', label: '4. Semester E-Commerce' },
-  { icon: '💡', label: 'JESUS 1ST' },
-];
 ---
 
 <section
   id="ueber"
   class="relative py-28 md:py-36 overflow-hidden"
-  style="background: #0C1629;"
+  style="background: #16213b;"
   aria-labelledby="ueber-headline"
 >
   <!-- Atmosphärischer Blob -->
@@ -25,82 +20,89 @@ const facts = [
   ></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-    <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-      <!-- Linke Seite: Zitat-Karte -->
-      <div class="fade-up">
+    <!-- Section Header (AI-Stil) -->
+    <div class="mb-14 fade-up">
+      <span class="ueber-label">ÜBER MICH</span>
+      <h2
+        id="ueber-headline"
+        class="ueber-title mt-3"
+      >
+        Lernend. Wachsend.<br />
+        <em>Aus Überzeugung.</em>
+      </h2>
+    </div>
+
+    <!-- Two column layout -->
+    <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+      <!-- Linke Seite: Foto (Platzhalter bis Bild geliefert wird) -->
+      <div class="fade-up" style="transition-delay: 0.06s;">
         <div
-          class="relative aspect-square max-w-[400px] mx-auto rounded-3xl overflow-hidden flex flex-col justify-end p-10"
-          style="background: linear-gradient(160deg, rgba(8,31,91,0.3) 0%, rgba(5,12,24,0.8) 100%); border: 1px solid rgba(201,168,76,0.1);"
+          class="relative aspect-square max-w-[420px] mx-auto rounded-3xl overflow-hidden"
+          style="border: 1px solid rgba(201,168,76,0.15); box-shadow: 0 0 60px rgba(201,168,76,0.06), 0 20px 60px rgba(0,0,0,0.3);"
         >
-          <!-- Großes JM im Hintergrund -->
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
-            <span class="font-headline text-[11rem] leading-none" style="color: rgba(201,168,76,0.05);">JM</span>
-          </div>
-
-          <!-- Gold glow oben rechts -->
+          <img
+            src="/assets/profilbild.png"
+            alt="Jakob Menger"
+            class="w-full h-full object-cover object-top"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            loading="lazy"
+          />
+          <!-- Platzhalter – wird durch echtes Foto ersetzt -->
           <div
-            class="absolute top-0 right-0 w-40 h-40 rounded-full pointer-events-none"
-            style="background: radial-gradient(circle at top right, rgba(201,168,76,0.1) 0%, transparent 70%); filter: blur(20px);"
-            aria-hidden="true"
-          ></div>
-
-          <!-- Zitat -->
-          <div class="relative z-10">
-            <blockquote
-              class="text-white/80 text-xl leading-relaxed italic font-light"
-              style="border-left: 2px solid rgba(201,168,76,0.5); padding-left: 1.25rem;"
-            >
-              „Christus in euch, die Hoffnung der Herrlichkeit."
-            </blockquote>
-            <cite class="block text-sm mt-4 not-italic tracking-[0.15em]" style="color: rgba(201,168,76,0.6);">Kolosser 1,27</cite>
+            class="w-full h-full flex flex-col items-center justify-center gap-4"
+            style="display:none; background: linear-gradient(160deg, #16213b 0%, #0f172a 100%);"
+            aria-label="Foto-Platzhalter"
+          >
+            <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px dashed rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center;">
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="rgba(201,168,76,0.4)" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+            </div>
+            <span class="text-xs tracking-[0.2em] uppercase text-center" style="color: rgba(201,168,76,0.45);">
+              Foto wird<br />nachgeliefert
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- Rechte Seite: Text -->
+      <!-- Rechte Seite: Text + Button (AI-Layout-Stil) -->
       <div>
-        <div class="fade-up mb-5">
-          <span class="text-xs font-semibold tracking-[0.22em] uppercase" style="color: #C9A84C;">Über mich</span>
-        </div>
-
-        <h2
-          id="ueber-headline"
-          class="font-headline text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] text-white fade-up"
-          style="transition-delay: 0.06s;"
-        >
-          WER<br />
-          <span style="color: #C9A84C;">ICH BIN</span>
-        </h2>
-
-        <div class="mt-9 space-y-5 font-light text-lg leading-relaxed fade-up" style="color: rgba(255,255,255,0.55); transition-delay: 0.1s;">
-          <p>
-            Ich bin Jakob — Student, Marketer, Creator und Christ. Ich lebe in der Schnittstelle zwischen digitalem Business und echtem Leben: Ich lerne jeden Tag dazu, probiere aus, mache Fehler und wachse.
+        <div class="space-y-5 fade-up" style="transition-delay: 0.1s;">
+          <p class="text-lg leading-relaxed font-medium" style="color: rgba(255,255,255,0.85);">
+            Ich bin Jakob, Student im 4. Semester E-Commerce an der THWS Würzburg, Online Marketer bei der <strong style="color: #E8C87A;">Top Leader Academy</strong> und Head of Social Media bei der <strong style="color: #E8C87A;">JUMIKO Franken</strong>.
           </p>
-          <p>
-            Mein Antrieb? Kolosser 1,27 — Christus in mir, die Hoffnung der Herrlichkeit. Was das konkret bedeutet, siehst du in allem, was ich tue.
+          <p class="text-lg leading-relaxed font-light" style="color: rgba(255,255,255,0.55);">
+            Ich bin im digitalen Business unterwegs & gleichzeitig lerne ich jeden Tag dazu, probiere aus und entwickle mich so weiter!
           </p>
         </div>
 
-        <!-- Quick facts -->
-        <div class="mt-10 flex flex-wrap gap-3 fade-up" style="transition-delay: 0.18s;">
-          {facts.map((fact) => (
-            <span
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
-              style="background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.18); color: #E8C87A;"
-            >
-              <span aria-hidden="true">{fact.icon}</span>
-              {fact.label}
-            </span>
-          ))}
+        <!-- LinkedIn Button -->
+        <div class="mt-10 fade-up" style="transition-delay: 0.18s;">
+          <a
+            href="https://www.linkedin.com/in/jakobmenger/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+            style="border: 1px solid rgba(201,168,76,0.35); color: #C9A84C;"
+            onmouseover="this.style.background='rgba(201,168,76,0.1)'; this.style.borderColor='rgba(201,168,76,0.6)'"
+            onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(201,168,76,0.35)'"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <rect x="1" y="1" width="14" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M4.5 6.5v5M4.5 4.5v.5M7 11.5V8.5c0-1 .7-1.5 1.5-1.5s1.5.5 1.5 1.5v3M7 6.5v5"/>
+            </svg>
+            LinkedIn-Profil →
+          </a>
         </div>
 
-        <!-- Stats -->
+        <!-- Quick stats -->
         <div class="mt-14 grid grid-cols-3 gap-6 fade-up" style="transition-delay: 0.24s; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem;">
           {[
             { value: '4.', label: 'Semester' },
-            { value: '2+', label: 'Jahre Erfahrung' },
-            { value: '∞', label: 'Motivation' },
+            { value: '💻', label: 'Digital Business' },
+            { value: '🚀', label: 'Verantwortung' },
           ].map((stat) => (
             <div class="text-center">
               <div class="font-headline text-4xl" style="color: #C9A84C;">{stat.value}</div>

@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         bg: {
-          dark:   '#050C18',   // deep navy-black
-          darker: '#030810',
-          card:   '#0C1629',   // dark navy card
+          dark:   '#0f172a',   // midnight blue (primary)
+          darker: '#0e152a',   // footer / slightly darker
+          card:   '#16213b',   // alternate sections
           light:  '#EEF2FF',   // light blue-tinted
         },
         accent: {

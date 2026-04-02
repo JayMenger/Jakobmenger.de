@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #050C18;
+  background-color: #0f172a;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -37,6 +37,9 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s linear infinite;
+  /* Verhindert Clipping von Unterlängen (g, y, p …) bei background-clip: text */
+  overflow: visible;
+  line-height: 1.1;
 }
 
 @keyframes shimmer {
@@ -78,7 +81,7 @@ body {
   transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
 #main-nav.scrolled {
-  background: rgba(5, 12, 24, 0.85);
+  background: rgba(15, 23, 42, 0.85);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -146,6 +149,129 @@ body {
   box-shadow:
     0 20px 60px rgba(8,31,91, 0.12),
     0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ─── Über Mich – Section Header (AI-Stil, Dark Theme) ────────────── */
+.ueber-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C9A84C;
+}
+.ueber-label::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5px;
+  background: #C9A84C;
+  border-radius: 1px;
+}
+.ueber-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.ueber-title em {
+  font-style: italic;
+  color: #C9A84C;
+}
+
+/* ─── Skills – Section Header (AI-Stil, Dark Theme) ──────────────── */
+.skills-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C9A84C;
+}
+.skills-label::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5px;
+  background: #C9A84C;
+  border-radius: 1px;
+}
+.skills-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.skills-title em {
+  font-style: italic;
+  color: #C9A84C;
+}
+
+/* ─── Skills – Skill Group Dots (AI-Stil) ──────────────────────────── */
+.skill-group-dot-dark {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #C9A84C;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.skill-group-dot-dark--secondary {
+  background: rgba(201,168,76,0.5);
+}
+
+/* ─── Glaube – Faith Section (AI-Stil, Dark Theme) ─────────────────── */
+.faith-dark {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+.faith-dark-symbol {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #C9A84C;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+.faith-dark-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.faith-dark blockquote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
+  font-weight: 800;
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.faith-dark p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.975rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ─── Nav menu-open state (blur bleibt bei geöffnetem Burger-Menü) ── */
+#main-nav.menu-open {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
 }
 
 /* ─── Mobile menu ───────────────────────────────────────── */

@@ -29,11 +29,11 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#050C18] text-white font-body antialiased">
+  <body class="bg-[#0f172a] text-white font-body antialiased">
     <slot />
     <CookieBanner />
 
@@ -72,10 +72,12 @@ const {
           mobileMenu?.classList.remove('open');
           mobileMenu?.classList.add('hidden');
           burger.setAttribute('aria-expanded', 'false');
+          nav?.classList.remove('menu-open');
         } else {
           mobileMenu?.classList.remove('hidden');
           mobileMenu?.classList.add('open');
           burger.setAttribute('aria-expanded', 'true');
+          nav?.classList.add('menu-open');
         }
       });
 
@@ -85,6 +87,7 @@ const {
           mobileMenu?.classList.remove('open');
           mobileMenu?.classList.add('hidden');
           burger?.setAttribute('aria-expanded', 'false');
+          nav?.classList.remove('menu-open');
         });
       });
     </script>
