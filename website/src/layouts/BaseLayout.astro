@@ -86,6 +86,8 @@ const {
           burger.setAttribute('aria-expanded', 'false');
           nav?.classList.remove('menu-open');
         } else {
+          const navHeight = nav?.getBoundingClientRect().height ?? 72;
+          if (mobileMenu) mobileMenu.style.top = navHeight + 'px';
           mobileMenu?.classList.remove('hidden');
           mobileMenu?.classList.add('open');
           burger.setAttribute('aria-expanded', 'true');
