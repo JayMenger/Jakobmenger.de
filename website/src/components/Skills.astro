@@ -49,28 +49,34 @@ const creativeSkills = [
     </div>
 
     <!-- Two columns (AI-Stil mit Skill-Cloud) -->
-    <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+    <div class="grid md:grid-cols-2 gap-0 md:divide-x" style="border-color: rgba(201,168,76,0.12);">
 
-      <div class="fade-up" style="transition-delay: 0.1s;">
-        <div class="flex items-center gap-3 mb-8">
+      <div class="fade-up md:pr-16" style="transition-delay: 0.1s;">
+        <div class="flex items-center gap-3 mb-6 pb-5" style="border-bottom: 1px solid rgba(201,168,76,0.15);">
           <span class="skill-group-dot-dark" aria-hidden="true"></span>
           <h3 class="text-white font-semibold text-sm tracking-[0.08em] uppercase">E-Commerce & Marketing</h3>
         </div>
-        <div class="flex flex-wrap gap-2.5">
+        <div class="flex flex-wrap gap-3">
           {marketingSkills.map((skill) => (
-            <span class="skill-pill">{skill}</span>
+            <span class="skill-pill">
+              <span class="skill-pill-dot" aria-hidden="true"></span>
+              {skill}
+            </span>
           ))}
         </div>
       </div>
 
-      <div class="fade-up" style="transition-delay: 0.15s;">
-        <div class="flex items-center gap-3 mb-8">
+      <div class="fade-up md:pl-16 mt-12 md:mt-0" style="transition-delay: 0.15s;">
+        <div class="flex items-center gap-3 mb-6 pb-5" style="border-bottom: 1px solid rgba(201,168,76,0.15);">
           <span class="skill-group-dot-dark skill-group-dot-dark--secondary" aria-hidden="true"></span>
           <h3 class="text-white font-semibold text-sm tracking-[0.08em] uppercase">Content & Kreativität</h3>
         </div>
-        <div class="flex flex-wrap gap-2.5">
+        <div class="flex flex-wrap gap-3">
           {creativeSkills.map((skill) => (
-            <span class="skill-pill">{skill}</span>
+            <span class="skill-pill">
+              <span class="skill-pill-dot" aria-hidden="true"></span>
+              {skill}
+            </span>
           ))}
         </div>
       </div>
@@ -79,7 +85,7 @@ const creativeSkills = [
 
     <!-- Studium Box -->
     <div
-      class="mt-16 rounded-3xl p-8 md:p-10 fade-up"
+      class="mt-12 rounded-3xl p-8 md:p-10 fade-up"
       style="background: rgba(8,31,91,0.2); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);"
     >
       <div class="flex flex-wrap items-start gap-8">
