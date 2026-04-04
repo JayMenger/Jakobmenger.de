@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import profilbild from '../assets/profilbild.jpg';
 ---
 
 <section
@@ -42,12 +44,13 @@
           class="relative aspect-square max-w-[420px] mx-auto rounded-3xl overflow-hidden"
           style="border: 1px solid rgba(201,168,76,0.15); box-shadow: 0 0 60px rgba(201,168,76,0.06), 0 20px 60px rgba(0,0,0,0.3);"
         >
-          <img
-            src="/assets/profilbild.jpg"
+          <Image
+            src={profilbild}
             alt="Jakob Menger"
             class="w-full h-full object-cover object-top"
             style="filter: brightness(1.15) contrast(1.05);"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            width={840}
+            height={840}
             loading="lazy"
           />
           <!-- Platzhalter – wird durch echtes Foto ersetzt -->
