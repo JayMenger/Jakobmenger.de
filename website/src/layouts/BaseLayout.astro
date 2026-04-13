@@ -74,6 +74,19 @@ const {
         }
       });
 
+      // ─── Nav-Höhe als CSS Variable setzen (einmalig beim Load) ─
+      // Verhindert getBoundingClientRect() im Click-Handler (Forced Reflow)
+      function updateNavHeight() {
+        if (nav) {
+          document.documentElement.style.setProperty(
+            '--nav-height',
+            nav.offsetHeight + 'px'
+          );
+        }
+      }
+      updateNavHeight();
+      window.addEventListener('resize', updateNavHeight, { passive: true });
+
       // ─── Burger menu ───────────────────────────────────────────
       const burger = document.getElementById('burger');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -86,8 +99,9 @@ const {
           burger.setAttribute('aria-expanded', 'false');
           nav?.classList.remove('menu-open');
         } else {
-          const navHeight = nav?.getBoundingClientRect().height ?? 72;
-          if (mobileMenu) mobileMenu.style.top = navHeight + 'px';
+          if (mobileMenu) {
+            mobileMenu.style.top = 'var(--nav-height)';
+          }
           mobileMenu?.classList.remove('hidden');
           mobileMenu?.classList.add('open');
           burger.setAttribute('aria-expanded', 'true');

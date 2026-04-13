@@ -1,5 +1,9 @@
 /* Google Fonts @import entfernt – Fonts werden lokal über BaseLayout geladen */
 
+:root {
+  --nav-height: 72px; /* Fallback; wird beim ersten Render via JS aktualisiert */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
